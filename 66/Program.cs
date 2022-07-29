@@ -1,24 +1,24 @@
-﻿int SumOfNaturalElem(int I, int J)
+﻿int SumOfNaturalElem(int M, int N)
 {
-    if (i < j)
+    if (M < N)
     {
-        while (i != j)
-            return i + SumOfNaturalElem(i + 1, j);
+        while (M != N)
+            return M + SumOfNaturalElem(M + 1, N);
     }
 
-    if (i > j)
+    if (M > N)
     {
-        while (i != j)
-            return i + SumOfNaturalElem(i - 1, j);
+        while (M != N)
+            return M + SumOfNaturalElem(M - 1, N);
     }
 
-    return i;
+    return M;
 }
 
 Console.Write("введите 1 число: ");
-int I = Convert.ToInt32(Console.ReadLine());
+int m = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("введите 2 число: ");
-int J = Convert.ToInt32(Console.ReadLine());
+int n = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("сумма натуральных элементов в указанном промежутке: " + SumOfNaturalElem(I, J));
+Console.Write("сумма натуральных элементов в указанном промежутке: " + SumOfNaturalElem(m, n));
